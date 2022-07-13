@@ -13,7 +13,12 @@ public class QueryProcessor {
                     "writer in the English language and the world's pre-eminent dramatist.";
         } else if (query.contains("name")) {
            return "Luca";
-        } else {
+        } else if (query.contains("plus")) {
+            String[] liste = query.split("\\s+");
+            int ergebnis = Integer.parseInt(liste[0]) + Integer.parseInt(liste[2]);
+            return String.valueOf(ergebnis);
+        }
+        else {
             return "";
         }
     }
