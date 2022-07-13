@@ -15,8 +15,10 @@ public class QueryProcessor {
            return "Luca";
         } else if (query.contains("plus")) {
             String[] liste = query.split("\\s+");
-            int ergebnis = Integer.parseInt(liste[0]) + Integer.parseInt(liste[2]);
+            int ergebnis = Integer.parseInt(liste[3]) + Integer.parseInt(liste[5]);
             return String.valueOf(ergebnis);
+        } else if (query.contains("largest")) {
+            return "";
         }
         else {
             return "";
